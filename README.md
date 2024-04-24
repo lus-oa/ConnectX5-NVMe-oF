@@ -30,8 +30,8 @@ ConnectX5网卡配置NVMeoF测试环境
 #### 1.2.2 编译安装
 ```shell
 # 解压编译安装
- tar -zxvf MLNX_OFED_LINUX-5.0-2.1.8.0-ubuntu18.04-x86_64.tgz   
- cd MLNX_OFED_LINUX-5.0-2.1.8.0-ubuntu18.04-x86_64
+ tar -zxvf MLNX_OFED_LINUX-24.01-0.3.3.1-ubuntu20.04-x86_64.tgz   
+ cd MLNX_OFED_LINUX-24.01-0.3.3.1-ubuntu20.04-x86_64
  ./mlnxofedinstall --with-nvmf --force --add-kernel-support
 # 加载相关驱动内核模块
  modprobe nvmet
