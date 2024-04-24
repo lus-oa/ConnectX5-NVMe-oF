@@ -23,11 +23,22 @@ ConnectX5网卡配置NVMeoF测试环境
 ### 1.2 编译安装MLNX_OFED_LINUX驱动
 &emsp;首先需要安装nvme-cli:`apt install nvme-cli`  
 #### 1.2.1 下载驱动
-驱动下载地址[点我](https://www.mellanox.com/products/infiniband-drivers/linux/mlnx_ofed) ,根据你自己的Ubuntu版本、Linux版本以及网卡版本下载对应的驱动。  
+驱动下载地址[点我](https://www.mellanox.com/products/infiniband-drivers/linux/mlnx_ofed) ,根据你自己的Ubuntu版本以及网卡版本下载对应的驱动。  
 ![image](https://github.com/lus-oa/ConnectX5-NVMe-oF/assets/122666739/2614c800-e049-40d3-b094-6230567c256f)  
 ![image](https://github.com/lus-oa/ConnectX5-NVMe-oF/assets/122666739/efe35b8a-456a-47f7-9a44-e534962ea131)  
 ![image](https://github.com/lus-oa/ConnectX5-NVMe-oF/assets/122666739/4a3012ee-5d9c-4fa0-b93c-1f43409d2dde)  
 #### 1.2.2 编译安装
-
+```shell
+# 解压编译安装
+tar -zxvf MLNX_OFED_LINUX-5.0-2.1.8.0-ubuntu18.04-x86_64.tgz   
+cd MLNX_OFED_LINUX-5.0-2.1.8.0-ubuntu18.04-x86_64
+./mlnxofedinstall --with-nvmf --force --add-kernel-support
+# 加载相关驱动内核模块
+modprobe nvmet
+modprobe nvmet-rdma
+modprobe nvmet-tcp
+modprobe nvme-fabrics
+modprobe nvme_core
+```
 
 
