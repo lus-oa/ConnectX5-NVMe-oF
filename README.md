@@ -18,6 +18,7 @@ ConnectX5网卡配置NVMeoF测试环境
 
 #### 1.1.2 完整安装Linux内核
 &emsp;若[1.1.1](#1.1.1) 中的办法无法成功安装内核，那么需要手动编译安装内核。
-具体教程点击链接[Linux内核安装教程](https://blog.csdn.net/weixin_42581825/article/details/130001118)
+具体教程点击链接[Linux内核安装教程](https://blog.csdn.net/weixin_42581825/article/details/130001118) 。
 
+### 1.2 编译安装MLNX_OFED_LINUX驱动
 
