@@ -16,7 +16,7 @@ ConnectX5网卡配置NVMeoF测试环境
 &emsp;⑨保存退出后更新 `sudo update-grub`  
 &emsp;⑩重启并且 `uname -r` 检查是否安装成功
 
-#### 完整安装Linux内核
+#### 1.1.2 完整安装Linux内核
 &emsp;若[1.1.1](#1.1.1) 中的办法无法成功安装内核，那么需不要手动
 
 
