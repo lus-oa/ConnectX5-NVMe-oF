@@ -42,6 +42,7 @@ ConnectX5网卡配置NVMeoF测试环境
 ```
 
 ### 1.3 运行调试
+用 `ibstst` 指令查看两端的网口是否为 `active` 
 #### target端(存储侧）
 ```bash
 /etc/init.d/openibd restart
