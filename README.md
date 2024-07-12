@@ -63,7 +63,7 @@ echo 1 > enable
 cd /sys/kernel/config/nvmet/ports
 mkdir 123
 cd 123
-ip addr add 192.168.1.25/24 dev ib0    # 192.168.102.25 是本机的IP地址，配置时根据实际情况修改
+ip addr add 192.168.1.25/24 dev ib0    # 192.168.102.25 是本机的IP地址，配置时通过ifconfig指令根据实际情况修改
 echo 192.168.102.25 > addr_traddr
 echo rdma > addr_trtype
 echo ipv4 > addr_adrfam
