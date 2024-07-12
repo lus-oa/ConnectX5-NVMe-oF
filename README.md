@@ -41,4 +41,19 @@ ConnectX5网卡配置NVMeoF测试环境
  modprobe nvme_core
 ```
 
-未完待续...
+### 1.3 运行调试
+#### server端
+#### client端
+```
+/etc/init.d/openibd restart
+systemctl restart opensmd
+
+modprobe nvmet
+modprobe nvmet-rdma
+modprobe nvmet-tcp
+modprobe nvme-fabrics
+modprobe nvme_core
+ip addr add 192.168.1.160/24 dev ibp3s0f0
+nvme discover -t rdma -a 192.168.1.159 -s 4420
+nvme connect -t rdma -a  192.168.1.159 -s 4420 -n  nvme-subsystem-name
+```
