@@ -71,7 +71,7 @@ cd subsystems/
 ln -s ../../../subsystems/nvme-subsystem-name nvme-subsystem-name
 ```
 
-#### client端
+#### client端（通过网卡与远端对远端存储侧进行读写操作）
 ```bash
 /etc/init.d/openibd restart
 systemctl restart opensmd
