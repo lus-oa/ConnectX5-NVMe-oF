@@ -1,5 +1,6 @@
 # ConnectX5-NVMe-oF
 ConnectX5网卡配置NVMeoF测试环境
+可与该[博客](https://blog.csdn.net/Hansyang84/article/details/121422043) 共同参考。
  ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨
 ## 1.运行环境
 ### 1.1 Linux内核安装
