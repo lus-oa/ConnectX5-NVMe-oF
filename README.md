@@ -43,7 +43,7 @@ ConnectX5网卡配置NVMeoF测试环境。
 ```
 
 ### 1.3 运行调试
-用 `ibstat` 指令查看两端的网口是否为 `active` 
+本测试需要用到两台主机，一台主机安装ConnectX-5网卡，并且安装网卡驱动作为client端；另一台主机安装ConnectX-5网卡和Ethernet-SSD作为target端。两主机通过网线连接，client端通过网卡去discover存储侧的存储设备，并且在client端使用FIO测试对远端的存储设备进行读写测试。用 `ibstat` 指令查看两端的网口是否为 `active` 
 #### target端(存储侧）
 ```bash
 /etc/init.d/openibd restart
