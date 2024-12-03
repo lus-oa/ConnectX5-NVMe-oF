@@ -60,13 +60,13 @@ echo 1 > attr_allow_any_host
 cd namespaces/  # 直接使用准备申请的NSID作为目录名创建目录
 mkdir 10
 cd 10
-echo "/dev/sdb" > device_path   # 这里关联的存储设备是/dev/sdb,根据实际情况修改
+echo "/dev/nvme0n1" > device_path   # 这里关联的存储设备是/dev/sdb,根据实际情况修改
 echo 1 > enable
 cd /sys/kernel/config/nvmet/ports
 mkdir 123
 cd 123
-ip addr add 192.168.1.25/24 dev ib0    # 192.168.102.25 是本机的IP地址，配置时通过ifconfig指令根据实际情况修改
-echo 192.168.102.25 > addr_traddr
+ip addr add 101.76.209.135/24 dev ib0    # 192.168.102.25 是本机的IP地址，配置时通过ifconfig指令根据实际情况修改
+echo 101.76.209.135 > addr_traddr
 echo rdma > addr_trtype
 echo ipv4 > addr_adrfam
 echo 4420 > addr_trsvcid   
